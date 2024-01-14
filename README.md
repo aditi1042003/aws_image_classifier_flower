@@ -31,7 +31,7 @@ used colab notebook to complete and train project due to Udacity workspace error
 + Sanity Checking with matplotlib
 
 # output
-![output image]()
+![output image](https://github.com/aditi1042003/aws_image_classifier_flower/blob/main/Images/Output.png)
 
 
 ### saved file 
