@@ -1,0 +1,61 @@
+ImageClassifier root$ python train.py --hidden_layer 1024 --epochs 5 
+VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace)
+    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): ReLU(inplace)
+    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (6): ReLU(inplace)
+    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (8): ReLU(inplace)
+    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (11): ReLU(inplace)
+    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (13): ReLU(inplace)
+    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (15): ReLU(inplace)
+    (16): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (17): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (18): ReLU(inplace)
+    (19): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (20): ReLU(inplace)
+    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (22): ReLU(inplace)
+    (23): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (24): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (25): ReLU(inplace)
+    (26): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (27): ReLU(inplace)
+    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (29): ReLU(inplace)
+    (30): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (classifier): Sequential(
+    (dropout): Dropout(p=0.4)
+    (fc1): Linear(in_features=25088, out_features=1024, bias=True)
+    (relu1): ReLU()
+    (fc2): Linear(in_features=1024, out_features=256, bias=True)
+    (output): Linear(in_features=256, out_features=102, bias=True)
+    (softmax): LogSoftmax()
+  )
+)
+Epoch 1/5.. Train loss: 3.385..valid Loss: 1.702..valid accuracy: 0.563
+Epoch 1/5.. Train loss: 5.351..valid Loss: 1.319..valid accuracy: 0.633
+Epoch 1/5.. Train loss: 6.956..valid Loss: 0.983..valid accuracy: 0.721
+Epoch 2/5.. Train loss: 0.795..valid Loss: 0.890..valid accuracy: 0.750
+Epoch 2/5.. Train loss: 2.097..valid Loss: 0.679..valid accuracy: 0.805
+Epoch 2/5.. Train loss: 3.301..valid Loss: 0.986..valid accuracy: 0.757
+Epoch 3/5.. Train loss: 0.152..valid Loss: 0.701..valid accuracy: 0.810
+Epoch 3/5.. Train loss: 1.216..valid Loss: 0.743..valid accuracy: 0.803
+Epoch 3/5.. Train loss: 2.335..valid Loss: 0.751..valid accuracy: 0.809
+Epoch 3/5.. Train loss: 3.445..valid Loss: 0.654..valid accuracy: 0.821
+Epoch 4/5.. Train loss: 0.747..valid Loss: 0.704..valid accuracy: 0.806
+Epoch 4/5.. Train loss: 1.868..valid Loss: 0.710..valid accuracy: 0.825
+Epoch 4/5.. Train loss: 2.908..valid Loss: 0.638..valid accuracy: 0.825
+Epoch 5/5.. Train loss: 0.313..valid Loss: 0.572..valid accuracy: 0.841
+Epoch 5/5.. Train loss: 1.256..valid Loss: 0.641..valid accuracy: 0.838
+Epoch 5/5.. Train loss: 2.278..valid Loss: 0.592..valid accuracy: 0.843
+Epoch 5/5.. Train loss: 3.277..valid Loss: 0.636..valid accuracy: 0.838
